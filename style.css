@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+}
+
+.hero {
+    background-image: url('image/Logo_Jacarandá-06.png');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Animation for cards */
+.project-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero {
+        padding: 4rem 2rem;
+    }
+    
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+}
+
+/* Altura aproximada da navbar */
+:root {
+  --navbar-height: 160px;
+}
+
+/* Centraliza a seção ao rolar via âncora */
+section[id] {
+  scroll-margin-top: calc(50vh - (var(--navbar-height) / 1));
+}
