@@ -19,6 +19,9 @@ class CustomNavbar extends HTMLElement {
                     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
                 }
                 .navbar {
+                    display: flex;
+                    align-items: center;
+                    gap: 16px;
                     transition: all 0.3s ease;
                 }
                 .nav-link {
@@ -42,16 +45,18 @@ class CustomNavbar extends HTMLElement {
             <div id="navbar-wrapper" class="navbar-wrapper flex items-center justify-between h-16">
                 <div class="logo">
                     <a href="/" class="text-2xl font-bold flex items-center">
-                        <img src="image/logo_jacarandá.png" alt="Logo Jacarandá" style="height: 130px;">
+                        <img src="image/Logo-InstitutoJacaranda.png" alt="Logo Jacarandá" style="height: 160px;">
                     </a>
                 </div>
-                <nav class="navbar hidden md:flex space-x-8"></nav>
-                    <a href="#inicio" class="nav-link text-lg font-medium">Início</a>
-                    <a href="#sobre" class="nav-link text-lg font-medium">Sobre</a>
-                    <a href="#projetos" class="nav-link text-lg font-medium">Projetos</a>
-                    <a href="#transparencia" class="nav-link text-lg font-medium">Transparência</a>
-                    <a href="#contato" class="nav-link text-lg font-medium">Contato</a>
+                <nav class="navbar">
+                     <a href="#inicio" class="nav-link">Início</a>
+                    <a href="#sobre" class="nav-link">Sobre</a>
+                    <a href="#projetos" class="nav-link">Projetos</a>
+                    <a href="#transparencia" class="nav-link">Transparência</a>
+                    <a href="#contato" class="nav-link">Contato</a> 
                 </nav>
+
+
                 <div id="menu-toggle" class="md:hidden cursor-pointer"></div>
                     <i data-feather="menu" class="w-8 h-8 text-white"></i>
                 </div>

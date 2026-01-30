@@ -34,10 +34,32 @@ body {
 
 /* Altura aproximada da navbar */
 :root {
-  --navbar-height: 160px;
+  --navbar-height: 150px;
 }
 
 /* Centraliza a seção ao rolar via âncora */
 section[id] {
-  scroll-margin-top: calc(50vh - (var(--navbar-height) / 1));
+  scroll-margin-top: calc(45vh - (var(--navbar-height) / 2));
 }
+
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 32px; /* AQUI está o espaço */
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    white-space: nowrap;
+}
+
+#navbar-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
