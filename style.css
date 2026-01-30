@@ -39,7 +39,7 @@ body {
 
 /* Centraliza a seção ao rolar via âncora */
 section[id] {
-  scroll-margin-top: calc(45vh - (var(--navbar-height) / 2));
+  scroll-margin-top: calc(43vh - (var(--navbar-height) / 2));
 }
 
 .navbar {

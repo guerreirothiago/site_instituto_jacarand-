@@ -29,7 +29,7 @@ class CustomFooter extends HTMLElement {
                     <p>&copy; 2026 Instituto Jacarandá - Filial Manaus. Todos os direitos reservados.</p>
                     <div style="margin-top: 16px; display: flex; flex-direction: column; gap: 8px;">
                         <p><img src="image/localização.jpg" alt="Localização" style="width: 20px; height: 20px; margin-right: 8px; vertical-align: middle;"><strong>Endereço Manaus:</strong> R. Comendador Clementino, 183 - Centro, Manaus - AM, 69025-000</p>
-                        <p><img src="image/localização.jpg" alt="Localização" style="width: 20px; height: 20px; margin-right: 8px; vertical-align: middle;"><strong>Endereço São Paulo:</strong> Instituto Jacaranda Avenida Paulista 2202, Bela Vista, São Paulo SP, 01310-932</p>
+                        <p><img src="image/localização.jpg" alt="Localização" style="width: 20px; height: 20px; margin-right: 8px; vertical-align: middle;"><strong>Endereço São Caetano do Sul:</strong> Rua Antonio de Andrade, 72 - Ceramica, São Caetano do Sul - SP, 09540-240</p>
                     </div>
                 </div>
             </footer>
