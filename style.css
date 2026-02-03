@@ -5,6 +5,51 @@ body {
     color: #333;
 }
 
+:root {
+    --lilas: #800080;
+    --lilas-contrast: #ffffff;
+    --lilas-soft: #f7f0f7;
+}
+
+/* Theme overrides: map all purple accents to lilas while keeping contrast */
+.text-purple-900,
+.text-purple-800,
+.text-purple-700 {
+    color: var(--lilas) !important;
+}
+
+.bg-purple-900,
+.bg-purple-800 {
+    background-color: var(--lilas) !important;
+}
+
+.bg-purple-50 {
+    background-color: #ffffff !important;
+}
+
+.border-purple-900,
+.border-purple-800 {
+    border-color: var(--lilas) !important;
+}
+
+.text-purple-100 {
+    color: var(--lilas-contrast) !important;
+}
+
+.hover\:bg-purple-800:hover,
+.hover\:bg-purple-900:hover {
+    background-color: var(--lilas) !important;
+}
+
+.hover\:bg-purple-50:hover {
+    background-color: var(--lilas-soft) !important;
+}
+
+.focus\:ring-purple-900:focus,
+.focus\:ring-purple-600:focus {
+    --tw-ring-color: var(--lilas) !important;
+}
+
 .hero {
     background-image: url('image/Logo_Jacarandá-06.png');
     background-size: cover;

@@ -26,4 +26,21 @@ document.addEventListener('DOMContentLoaded', function() {
             mobileMenu.classList.toggle('open');
         });
     }
+
+    // Reproduzir vÃ­deos apenas quando estiver passando o mouse
+    document.querySelectorAll('[data-hover-play]').forEach(video => {
+        const playOnHover = () => {
+            const playPromise = video.play();
+            if (playPromise && typeof playPromise.catch === 'function') {
+                playPromise.catch(() => {});
+            }
+        };
+        const pauseOnLeave = () => {
+            video.pause();
+        };
+        video.addEventListener('mouseenter', playOnHover);
+        video.addEventListener('focus', playOnHover);
+        video.addEventListener('mouseleave', pauseOnLeave);
+        video.addEventListener('blur', pauseOnLeave);
+    });
 });

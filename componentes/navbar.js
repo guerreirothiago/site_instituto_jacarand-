@@ -110,7 +110,6 @@ class CustomNavbar extends HTMLElement {
                     }
                 }
             </style>
-            #posicionar navbar com scroll corretamente
             <div id="navbar-wrapper" class="navbar-wrapper">
                 <div class="logo">
                     <a href="/" class="text-2xl font-bold flex items-center">
@@ -139,38 +138,47 @@ class CustomNavbar extends HTMLElement {
                     <a href="#contato" class="nav-link">Contato</a>
                 </div>
             </div>
-
-            <script>
-                const navbarElement = this;
-                
-                setTimeout(() => {
-                    const navbarWrapper = navbarElement.shadowRoot.getElementById('navbar-wrapper');
-                    const menuToggle = navbarElement.shadowRoot.getElementById('menu-toggle');
-                    const mobileMenu = navbarElement.shadowRoot.getElementById('mobile-menu');
-                    const navLinks = navbarElement.shadowRoot.querySelectorAll('.mobile-menu .nav-link');
-                    
-                    menuToggle.addEventListener('click', function() {
-                        mobileMenu.classList.toggle('open');
-                    });
-                    
-                    // Fechar menu ao clicar em um link
-                    navLinks.forEach(link => {
-                        link.addEventListener('click', function() {
-                            mobileMenu.classList.remove('open');
-                        });
-                    });
-                    
-                    // Change navbar style on scroll
-                    window.addEventListener('scroll', function() {
-                        if (window.scrollY > 50) {
-                            navbarWrapper.classList.add('scrolled');
-                        } else {
-                            navbarWrapper.classList.remove('scrolled');
-                        }
-                    });
-                }, 0);
-            </script>
         `;
+
+        const navbarWrapper = this.shadowRoot.getElementById('navbar-wrapper');
+        const menuToggle = this.shadowRoot.getElementById('menu-toggle');
+        const mobileMenu = this.shadowRoot.getElementById('mobile-menu');
+        const navLinks = this.shadowRoot.querySelectorAll('.mobile-menu .nav-link');
+
+        if (menuToggle && mobileMenu) {
+            menuToggle.addEventListener('click', () => {
+                mobileMenu.classList.toggle('open');
+            });
+        }
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('open');
+            });
+        });
+
+        window.addEventListener('scroll', () => {
+            if (!navbarWrapper) return;
+            if (window.scrollY > 50) {
+                navbarWrapper.classList.add('scrolled');
+            } else {
+                navbarWrapper.classList.remove('scrolled');
+            }
+        });
+
+        const closeOnOutsideClick = (event) => {
+            if (!mobileMenu || !mobileMenu.classList.contains('open')) return;
+            const path = event.composedPath ? event.composedPath() : [];
+            const clickedInside =
+                (navbarWrapper && path.includes(navbarWrapper)) ||
+                (menuToggle && path.includes(menuToggle)) ||
+                (mobileMenu && path.includes(mobileMenu));
+            if (!clickedInside) {
+                mobileMenu.classList.remove('open');
+            }
+        };
+
+        this.ownerDocument.addEventListener('click', closeOnOutsideClick);
     }
 }
 
