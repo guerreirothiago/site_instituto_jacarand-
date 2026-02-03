@@ -13,7 +13,7 @@ class CustomNavbar extends HTMLElement {
                     left: 0;
                     right: 0;
                     z-index: 10;
-                    background-color: #3d1e86ff;
+                    background-color: #800080;
                     transition: all 0.3s ease;
                     padding: 0 48px;
                     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -24,7 +24,7 @@ class CustomNavbar extends HTMLElement {
                 }
                 
                 .navbar-wrapper.scrolled {
-                    background-color: #3e2084ff;
+                    background-color: #800080;
                     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
                 }
                 
@@ -70,7 +70,7 @@ class CustomNavbar extends HTMLElement {
                     top: 160px;
                     left: 0;
                     right: 0;
-                    background-color: #3d1e86ff;
+                    background-color: #800080;
                     flex-direction: column;
                     padding: 20px 48px;
                     gap: 15px;
@@ -114,7 +114,7 @@ class CustomNavbar extends HTMLElement {
             <div id="navbar-wrapper" class="navbar-wrapper">
                 <div class="logo">
                     <a href="/" class="text-2xl font-bold flex items-center">
-                        <img src="image/Logo-InstitutoJacaranda.png" alt="Logo Jacarandá">
+                        <img src="image/logo-lilas-sem-fundo.png" alt="Logo Jacarandá">
                     </a>
                 </div>
                 <nav class="navbar">

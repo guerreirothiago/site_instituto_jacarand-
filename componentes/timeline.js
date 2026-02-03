@@ -12,7 +12,7 @@ class CustomTimeline extends HTMLElement {
                     content: '';
                     position: absolute;
                     width: 6px;
-                    background-color: #a855f7;
+                    background-color: #800080;
                     top: 0;
                     bottom: 0;
                     left: 50%;
@@ -32,7 +32,7 @@ class CustomTimeline extends HTMLElement {
                     height: 25px;
                     right: -12px;
                     background-color: white;
-                    border: 4px solid #a855f7;
+                    border: 4px solid #800080;
                     top: 15px;
                     border-radius: 50%;
                     z-index: 1;
@@ -76,13 +76,13 @@ class CustomTimeline extends HTMLElement {
             <div class="timeline">
                 <div class="timeline-item left">
                     <div class="timeline-content">
-                        <h3 class="font-bold text-purple-800">2009</h3>
+                        <h3 class="font-bold text-brand-800">2009</h3>
                         <p>Fundação da Sede do Instituto Jacarandá</p>
                     </div>
                 </div>
                 <div class="timeline-item right">
                     <div class="timeline-content">
-                        <h3 class="font-bold text-purple-800">2021</h3>
+                        <h3 class="font-bold text-brand-800">2021</h3>
                         <p>Estabelecimento da Filial em Manaus</p>
                     </div>
                 </div>
